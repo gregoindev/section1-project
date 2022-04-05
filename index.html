@@ -36,8 +36,8 @@
             <h2>a better way to camp</h2>
           </div>
 
-          
-          <!-- ===== reserve button ===== -->
+
+          <!-- ===== task 3: reserve button ===== -->
           <div class="col-md-4 col-xl-2 mt-4">
             <a class="btn btn-lg btn-info text-nowrap" href="#reserveForm">Reserve Campsite</a>
           </div>
@@ -95,6 +95,7 @@
           <h2>Featured Campsites</h2>
         </div>
 
+        
         <div class="col">
           <div class="media">
             <div class="media-body align-self-center">
@@ -113,6 +114,8 @@
         <div class="col-sm-4 order-sm-last col-md-3">
           <h2 class="text-sm-right">Our Community Partners</h2>
         </div>
+
+     
         <div class="col">
           <div class="media">
              <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="bootstrap outfitters">
@@ -122,26 +125,28 @@
                     Bootstrap Outfitters supplies you with gear you need at prices you
                     can't beat.
                   </p>
-           </div> 
+              </div> 
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
 
-      <!-- ============ card =============== -->
-    <div class="row row-content">
-      <div class="col-sm-6 mx-auto">
+
+      <!-- ============ task2: card =============== -->
+      <div class="row row-content">
+       <div class="col-sm-6 mx-auto">
         <div class="card">
           <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
           <div class="card-body">
+
             <form id="reserveForm">
                 <div class="form-group row">
 
                   <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
 
 
-                  <!-- ======== select-dropdown ========  -->
+                  <!-- ======== select / dropdown ========  -->
                   <div class="col">
                     <select class="form-control" name="numCampers" id="numCampers">
                       <option selected>Select...</option>
@@ -159,7 +164,7 @@
                 <div class="form-group row">
                   <label class="col-sm-6 col-form-label" for="date">Date</label>
                   <div class="col">
-                    <input class="form-control" type="date" name="date" placeholder="Date" />
+                    <input class="form-control" type="date" id="date"  name="date" placeholder="1/1/1991" />
                   </div>
                 </div>
 
