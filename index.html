@@ -14,7 +14,7 @@
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 
-     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 
     <link
       rel="stylesheet"
@@ -45,7 +45,7 @@
     </header>
 
     <!---------- reserve modal -------->
-     <div id="reserveModal" class="modal fade" role="dialog">
+    <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header bg-info text-white">
@@ -86,7 +86,7 @@
                     <label class="btn btn-success" active>
                       <input type="radio" name="siteType" id="siteTent" value="tent" checked>Tent
                     </label>
-                     <label class="btn btn-primary" >
+                    <label class="btn btn-primary" >
                       <input type="radio" name="siteType" id="siteRV" value="RV">RV
                     </label>
                   </div>
@@ -112,18 +112,18 @@
         <div class="container">
           <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-         <div class="col-4 col-sm-3 col-md-2 align-self-center">
+        <div class="col-4 col-sm-3 col-md-2 align-self-center">
           <img src="img/logo.png" alt="small logo home" class="img-fluid">
-         </div>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-         
-         <div class="collapse navbar-collapse" id="nucampNavbar">
-           <ul class="navbar-nav">
-             <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
-             <li class="nav-item">
-               <a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+          <div class="collapse navbar-collapse" id="nucampNavbar">
+            <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a>
               </li>
               <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-list fa-lg"></i> Sites</a></li>
               <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
@@ -176,7 +176,6 @@
         </div>
       </div>
 
-
       <!---------- carousel ---------->
     <div class="container">
 
@@ -221,6 +220,17 @@
                 <span class="carousel-control-next-icon"></span>
                 <span class="sr-only">Next</span>
               </a>  
+
+              <!------- carousel pause/play ------->
+              <div class="btn-group" id="carouselButton">
+                <button class="btn btn-sm btn-danger" id="carouselPause">
+                  <i class="fa fa-pause"></i>
+                </button>
+                  <button class="btn btn-sm btn-danger" id="carouselPlay">
+                  <i class="fa fa-play"></i>
+                </button>
+              </div>
+
           </div>
         </div>
       </div>
@@ -268,18 +278,17 @@
           <h2 class="text-sm-right">Our Community Partners</h2>
         </div>
 
-     
         <div class="col">
           <div class="media">
-             <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="bootstrap outfitters">
-               <div class="media-body align-self-center">             
+              <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="bootstrap outfitters">
+              <div class="media-body align-self-center">             
                 <h3>Bootstrap Outfitters</h3>
                   <p class="d-none d-sm-block">
                     Bootstrap Outfitters supplies you with gear you need at prices you
                     can't beat.
                   </p>
               </div> 
-           </div>
+          </div>
           </div>
         </div>
     </div>
@@ -298,7 +307,7 @@
             </ul>
           </div>
           <div class="col-6 col-sm-5 text-center">
-             <h5>Social</h5>
+            <h5>Social</h5>
             <a
               class="btn btn-social-icon btn-instagram"
               href="http://instagram.com/"
@@ -338,10 +347,17 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+
     <script>
-        // $(function () {
-        //     $('[data-toggle="tooltip"]').tooltip()
-        // })
+      $(function() {
+        $(".carousel").carousel( { interval: 2000} );
+        $("#carouselPause").click(function() {
+          $('.carousel').carousel("pause");
+        });
+        $('#carouselPlay').click(function(){
+          $('.carousel').carousel("cycle");
+        });
+      });
     </script>
   </body>
 </html>
